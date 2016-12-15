@@ -32,7 +32,7 @@ class EstacionServicio extends CI_Controller {
             base_url().'extras/fileupload/js/jquery.fileupload.js',
             base_url().'extras/asea/es/es_registro.js'
         );
-        $this->load->view('asea/estacion_servicio/principalES',$data);
+        $this->load->view('asea/estacion_servicio/PrincipalES',$data);
     }
 
     public function buscarEstacionesServicio(){
