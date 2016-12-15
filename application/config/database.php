@@ -74,15 +74,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * configuracion de la BD conforme al servidor
  */
+switch ($_SERVER['SERVER_ADDR']){
+    case '31.220.104.97':
+        $user_db = 'u972410845_civik';
+        $pass_db = 'Pa$$word';
+        $data_base = 'u972410845_asea';
+        break;
+    default:
+        $user_db = 'root';
+        $pass_db = 'root';
+        $data_base = 'sistema_asea';
+        break;
+}
+
 $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => '',
-	'password' => '',
-	'database' => '',
+	'username' => $user_db,
+	'password' => $pass_db,
+	'database' => $data_base,
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

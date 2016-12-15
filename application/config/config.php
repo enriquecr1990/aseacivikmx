@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+date_default_timezone_set('Mexico/General');
 /*
 |--------------------------------------------------------------------------
 | Base Site URL
@@ -314,7 +314,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'argsecr1405';
 
 /*
 |--------------------------------------------------------------------------
