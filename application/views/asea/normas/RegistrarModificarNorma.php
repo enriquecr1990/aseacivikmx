@@ -23,7 +23,7 @@
                     <div class="form-group">
                         <label class="col-sm-2">Duración:</label>
                         <div class="col-sm-10">
-                            <input class="form-control" placeholder="Duración norma" data-rule-required="true"
+                            <input class="form-control" placeholder="Duración norma (horas)" data-rule-required="true"
                                    name="normas_asea[duracion]" value="<?=isset($normas_asea) ? $normas_asea->duracion : ''?>">
                         </div>
                     </div>

@@ -75,4 +75,9 @@ class Testing extends CI_Controller {
     public function testHost(){
         var_dump($_SERVER);exit;
     }
+
+    public function testCorreo(){
+        $correo = enviarCorreo('enrique_cr1990@hotmail.com,enriquecr1990@gmail.com','primer correo de prueba','estoy mandando un correo de prueba desde el asea');
+        var_dump($correo);exit;
+    }
 }

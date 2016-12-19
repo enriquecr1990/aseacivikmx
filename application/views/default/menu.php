@@ -107,7 +107,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="<?= base_url() . 'Asea/cerrarSesionAsea' ?>"><i class="fa fa-user-times"></i>&nbsp;Cerrar sessión</a>
+                            <a href="<?= base_url() . 'Asea/cerrarSesionAsea' ?>"><i class="glyphicon glyphicon-log-out"></i>&nbsp;Cerrar sessión</a>
                         </li>
                     </ul>
                 </li>

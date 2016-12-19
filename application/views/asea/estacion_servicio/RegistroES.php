@@ -36,7 +36,7 @@
                         <label class="col-sm-3 control-label" for="es_domicilio" >Domicilio:</label>
                         <div class="col-sm-9">
                             <input class="form-control" id="es_domicilio" placeholder="Escriba el domicilio de la estación de servicio"
-                                   data-rule-required="true" data-rule-maxlength="300" data-rule-minlength="25" name="estacion_servicio[domicilio]"
+                                   data-rule-required="true" data-rule-maxlength="300" data-rule-minlength="15" name="estacion_servicio[domicilio]"
                                    value="<?=isset($estacion_servicio) ? $estacion_servicio->domicilio : ''?>">
                         </div>
                     </div>

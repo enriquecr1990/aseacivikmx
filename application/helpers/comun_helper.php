@@ -188,4 +188,30 @@
         return $ch->encrypt->decode($strDesencriptar);
     }
 
+    function enviarCorreo($to,$subject,$message){
+        $CI =& get_instance();
+        $retorno['envio'] = false;
+        $retorno['msg'] = 'No fue posible mandar el correo a '.$to.', favor de intentar más tarde';
+        $user = 'no-reply@aseafirtsmx.esy.es';
+        $password='enrique0406=$=&';
+        $config['protocol'] = 'http';
+        $config['smtp_host'] = 'mx1.hostinger.mx';
+        $config['stmp_timeout'] = '7';
+        $config['smtp_port'] = 110;
+        $config['charset'] = 'utf-8';
+        $config['mailtype'] = 'text';
+        $config['smtp_user'] = $user;
+        $config['smtp_pass'] = $password;
+        $CI->load->library('email',$config);
+        $CI->email->from($user,'Civik administrador');
+        $CI->email->to($to);
+        $CI->email->subject($subject);
+        $CI->email->message($message);
+        if($CI->email->send()){
+            $retorno['envio'] = false;
+            $retorno['msg'] = 'Se envio información a su correo '.$to.', favor de revisar su bandeja de entrada o correo no deseado';
+        }
+        return $retorno;
+    }
+
 ?>
