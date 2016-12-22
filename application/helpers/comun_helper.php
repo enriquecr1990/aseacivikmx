@@ -191,7 +191,7 @@
     function enviarCorreo($to,$subject,$message){
         $CI =& get_instance();
         $retorno['envio'] = false;
-        $retorno['msg'] = 'No fue posible mandar el correo a '.$to.', favor de intentar más tarde';
+        $retorno['msg'] = 'No fue posible mandar el correo a <label>'.$to.'</label>, favor de intentar más tarde';
         $user = 'no-reply@aseafirtsmx.esy.es';
         $password='enrique0406=$=&';
         $config['protocol'] = 'http';
@@ -208,8 +208,8 @@
         $CI->email->subject($subject);
         $CI->email->message($message);
         if($CI->email->send()){
-            $retorno['envio'] = false;
-            $retorno['msg'] = 'Se envio información a su correo '.$to.', favor de revisar su bandeja de entrada o correo no deseado';
+            $retorno['envio'] = true;
+            $retorno['msg'] = 'Se envio información a su correo <label>'.$to.'</label>, favor de revisar su bandeja de entrada o correo no deseado';
         }
         return $retorno;
     }
