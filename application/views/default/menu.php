@@ -113,7 +113,7 @@
                 </li>
             </ul>
         <?php else: ?>
-            <!--<ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                         <i class="glyphicon glyphicon-menu-down"></i>
@@ -124,7 +124,7 @@
                         </li>
                     </ul>
                 </li>
-            </ul>-->
+            </ul>
             <form class="navbar-form navbar-right" role="form" method="post"
                   action="<?= base_url() . 'Asea/iniciarSesionAsea' ?>">
                 <input class="form-control" placeholder="Usuario" name="usuario">
