@@ -80,6 +80,11 @@ switch ($_SERVER['SERVER_ADDR']){
         $pass_db = 'Pa$$word';
         $data_base = 'u972410845_asea';
         break;
+    case '31.170.167.33':
+        $user_db = 'u911940910_asea';
+        $pass_db = 'Pa$$word1234';
+        $data_base = 'u911940910_asea';
+        break;
     default:
         $user_db = 'root';
         $pass_db = 'root';

@@ -398,6 +398,9 @@ var ESRegistro = {
 
     iniciar_carga_archivos_es : function () {
         //funcion para cargar archivo via ajax
+        var size_file = 0;
+        var tiempo = 0;
+        var nombre_archivo;
         var html_respuesta = '';
         $('.fileLogoEstacionServicio').fileupload({
             url : base_url + 'Asea/uploadFileLogo',
@@ -406,6 +409,10 @@ var ESRegistro = {
                 $('#es_logo_registro_file').html(loader_gif);
             },
             add: function (e,data) {
+                nombre_archivo = data.fileInput.val().replace("C:\\fakepath\\",""); //use to chrome
+                data.formData = {
+                    filename : nombre_archivo
+                };
                 var goUpload = true;
                 var uploadFile = data.files[0];
                 var extenciones = 'png|jpg|jpeg|gif';
